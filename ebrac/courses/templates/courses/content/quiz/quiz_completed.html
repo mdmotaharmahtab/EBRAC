@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+        Quiz Completed
+{% endblock %}
+
+{% block content %}
+    <h1>
+       You have already given this quiz. Your score :{{obj.score|floatformat:2}}%
+    </h1>
+    <p>
+    <a href="{%url "student_quiz_results"%}" class="button">See all your quiz results</a>
+    </p>
+{% endblock %}

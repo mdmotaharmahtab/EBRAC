@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}My Result{% endblock %}
+
+{% block content %}
+<div class="module">
+     <h1>{{request.user.username|upper}}</h1>
+     
+    {% for c,s in student_results.items %}
+        <h2>{{c.title}} Result:</h2>
+       
+        {%for student,modules in s.items%}
+          <h2>{{student.username}}</h2>
+          <p>Average marks : {{modules.averages.0|floatformat:2}}</p>
+           
+            {%for m,result in modules.items%}
+            {%if m == 'averages'%}
+            {%else%}
+            <h3>{{m.title}} : </h3>
+              
+                {%for r in result%}
+                   {{r.quiz.title}} : {{r.score|floatformat:2}}
+                   <br>
+                {%endfor%}
+              
+            {%endif%}
+               
+            {%endfor%}
+            
+           
+        {%endfor%}
+       
+    {% empty %}
+      <p>
+        You have not created any course yet.
+        <a href="{% url "course_create" %}">Create course</a>
+      </p>
+    {% endfor %}
+   
+</div>
+
+  
+{% endblock %}

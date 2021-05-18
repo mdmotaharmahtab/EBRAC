@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}
+Add answers to"{{ question.text }}"
+{% endblock %}
+
+{% block content %}
+    <h1>Add answers to : "{{ question.text }}"</h1>
+    <div class="module">
+    <h2>Course modules</h2>
+    <form method="post">
+        
+    {{ formset }}
+    {{ formset.management_form }} 
+    {% csrf_token %}
+        
+    <input type="submit" value="Save answers">
+    </form>
+    </div>
+{% endblock %}

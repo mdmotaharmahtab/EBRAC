@@ -1,0 +1,29 @@
+{% extends "courses/content/quiz/quiz_base.html" %}
+{%load static%}
+
+{% block title%}
+{{obj.title}}
+{% endblock title%}
+
+{% block content%}
+
+<b>{{obj.title}}</b>
+<p>score to pass: {{obj.required_score_to_pass}}%</p>
+<ol>
+{%for q in questions%}
+    {%for q,a in q.items%}
+        <li>Question : {{q}}</li>
+        <ul>
+        {%for answers in a%}
+            <li>Correct Answer : {{answers}}</li>        
+        {%endfor%}
+        </ul>
+    {%endfor%}
+    
+{% endfor %}
+</ol>
+<div>Your score for this quiz is : {{result.score|floatformat:2}}%</div>
+<p >
+<a href="{%url "student_quiz_results"%}">Your Marksheet</a>
+</p>
+{% endblock %}
