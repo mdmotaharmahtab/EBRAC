@@ -2,7 +2,7 @@
 This is an online learning platform created by django framework. There are two types of users - students and teachers. Teachers can create courses, add different course contents - text, video, image etc. They can create quizzes, see students' marksheet, see enrolled students in a course, their created courses etc. Students can view course content, enroll in a course, take a quiz, see their marksheet etc. 
 
 ## <a href='https://youtu.be/NKG48BIQugQ'>Project Demo Video</a>
-
+[![Alt text](https://github.com/MotaharMahtab/ebrac/blob/master/Functionalities.gif)
 In order to start the django projec, do the following :
 
 1. Create a virtual environment in your desired folder and activate it.
