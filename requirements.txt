@@ -16,7 +16,7 @@ django-bootstrap4==22.1
 django-ckeditor==6.3.2
 django-countries==7.3.2
 django-crispy-forms==1.14.0
-django-embed 0.2.1
+django-embed-video 1.4.4
 django-imagekit==4.1.0
 django-js-asset==2.0.0
 dnspython==2.2.1
