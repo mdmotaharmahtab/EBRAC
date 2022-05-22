@@ -5,16 +5,37 @@ This is an online learning platform created by django framework. There are two t
 ![Alt text](https://github.com/MotaharMahtab/ebrac/blob/master/Functionalities.gif)
 In order to start the django projec, do the following :
 
-1. Create a virtual environment in your desired folder and activate it. 
-``` console 
-virtualenv -p python3 envname 
-.\envname\Scripts\activate 
+## Running this project
+
+To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with
+
 ```
-2. Install all the required modules - ``` pip install -r requirements.txt ```
-3. Create a new django project ``` django-admin startproject ebrac ```
-4. Inside this ebrac folder, create courses and students apps (``` python manage.py startapp courses ```)
-5. Copy all the files from google drive project in your courses and students folder
-6. Copy the urls.py of ebrac from google drive and also change your settings.py just like in the google drive folder
-7. Create the database - ``` python manage.py makemigrations``` and ``` python manage.py migrate```
-8. Create an admin (``` python manage.py createsuperuser```)
-9. Run the server (``` python manage.py runserver```)
+pip install virtualenv
+```
+
+Clone or download this repository and open it in your editor of choice. In a terminal (mac/linux) or windows terminal, run the following command in the base directory of this project
+
+```
+virtualenv envname
+```
+
+That will create a new folder `env` in your project directory. Next activate it with this command on mac/linux:
+
+```
+.\envname\Scripts\activate
+```
+
+Then install the project dependencies with
+
+```
+pip install -r requirements.txt
+```
+Then cd into the project directory
+```
+cd ebrac
+```
+Now you can run the project with this command
+
+```
+python manage.py runserver
+```
